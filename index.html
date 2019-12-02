@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400i|Niconne|Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+    <div class="logo">
+        <img src="logo.png" alt="" width="300px" height="100px">
+    </div>
+    
+     <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <!-- <li><a href="index2.html">Search</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Home</a></li> -->
+    </ul>
+
+</nav>
+<div class="body1"></div>
+<div id="quote">
+        <marquee behavior="" direction=""><p>All you need is love,But good food now and then doesn't hurt.</p></marquee>
+    </div>
+    <div class="contain">
+        <div class=search>
+            <input type="text" id="index_location"class="searchterm" placeholder="Enter City">
+            <button type="submit" class="searchbtn" onclick="getlocation()">
+                <i class="fa fa-crosshairs" style="font-size: 24px;"></i>
+            </button>
+        </div>
+    </div>
+    <div class="contain2">
+        <div class=search>
+            <input type="text" id="res_name"class="searchterm" placeholder="Enter Retaurant Name">
+            <button type="submit"id="btn" class="searchbtn">
+                <i class="fa fa-search" style="font-size: 24px;"></i>
+            </button>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+<div class="container mt-5">
+    <div id="restaurants" class="row"></div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="restname"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalbody">
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="getreviews">Get Reviews</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="reviewsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="restnamee"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer" style="width: 1570px;height:500px;background-image: url(contactus.png);">
+                <a name="CU"></a>
+                <div style="margin-left:45px;margin-top: 45px;">
+                <h1 style="color: white;">Follow Us</h1><br><br>
+                <a href="https://github.com/SunnyGoyal319"><img id="github" src="github.png" height="45px" width="45px" alt="github"> </a>
+                <br><br>
+                <a href="https://www.linkedin.com/in/sunny-goyal-85584a175/"><img id="linkedin" src="linkedin.png" height="45px" width="45px" alt="linked In"> </a><br>
+              <a href="https://sunnygoyal319.github.io/resume/"><h2 style="color: white;">My Resume</h2></a>
+              </div>
+              <div style="margin-left:450px;margin-top: -170px;">
+                  <img src="message.png" height="45px" width="45px" alt="mail">
+               <h2 style="color: white;">sunnygoyal360@gmail.com</h2><br><br>
+               <img src="message.png" height="45px" width="45px" alt="mail">
+               <h2 style="color: white;">swatipra89@gmail.com</h2><br><br>
+               <img src="call.png"height="45px" width="45px" alt="ContactUS">
+               <h2 style="color: white;">8054593518,9034528926</h2><br><br>
+              </div>
+              </a>
+              </div>
+      </body>
+<script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
