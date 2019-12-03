@@ -36,8 +36,6 @@ function showPosition(position)
 var city1_name=document.getElementById('index_location')
   var rest_name=document.getElementById('res_name')
   var btn=document.getElementById('btn')
-//  btn.addEventListener('click',fun)
-
   var city_id
 function fun()
 {
